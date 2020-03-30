@@ -48,3 +48,11 @@ You can also provide a regular expression to parse certain files in the input di
 ```./scale.py --mask-file=~/Downloads/mask/covid_mask.stl --nose-to-chin-in-cm=<measurement> --output-dir=<some_output_dir> --rest-files-regex="covid.*stl"```
 
 Along with the file pointed to by "--mask-file", this option will provide a regular expression to parse other stl files in the same directory as the input file and write out the scaled version to the output directory. If this option isn't provided then all stl file in the input directory will be picked up.
+
+# Things to improve on
+
+1) I am doing a very simple approach now of scaling a bounding box. There could be much finer grained fitting made but that will have to alter the geometry but also keeping the constraints of an FDM printer as well. This is probably more long term.
+
+2) Provide some parameterisable gap for padding based on either pad length or user provided tolerance
+
+3) Take length from image of face: If this script is useful then further looking, my idea was to allow taking measurements from an image. To get proper dimensions, I would require a picture of the face along with something common like a debit/credit card like structure and from that I can get a reference size as I would know the size of the common object. The script won't save any of the images but will only acquire this length metric to calculate the scale factor. Based on this, I can detect where the face is and then where the nose is. After that I can define a recommended length from chin to a certain part of the nose for which the mask fitting will be best fit. This way all sizes will be created in a standard way.
