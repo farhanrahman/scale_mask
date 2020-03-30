@@ -5,7 +5,7 @@ With the recent outbreak of the COVID-19 virus and it becoming a pandemic, a lot
 1) Roomba attachable filter mask by Wally Reene and other members: https://www.thingiverse.com/thing:4243151
 2) Ruben Smit: https://www.thingiverse.com/thing:4233428 which was further derived from another person's design listed in the link as well.
 
-I personally printed 10 of the designs from (2) and trialling it out with some medical professionals in NHS. One thing that I learned is that a standardies fitting test needs to happen such that the mask fits snugly with the user. This just means there is no universal size so someone needs to either:
+I personally printed 10 of the designs from (2) and trialling it out with some medical professionals in NHS. One thing that I learned is that a standardised fitting test needs to happen such that the mask fits snugly with the user. This just means that there is no universal size so someone needs to either:
 
 1) provide the base schematics and one needs to size it appropriatley either by trial and error
 OR
