@@ -33,19 +33,19 @@ After this you should be good to go and execute the script
 
 You need to download any of the schematics for building the mask. You also need to get the measurement from nose to chin as mentioned above. Then you can invoke the following command:
 
-```./scale.py --mask-file=~/Downloads/mask/covid_mask.stl --nose-to-chin-in-cm=<measurement>```
+```./scale.py --mask-file=mask/covid_mask.stl --nose-to-chin-in-cm=<measurement>```
 
-Above I am assuming the mask exists in the path ```~/Downloads/mask/covid_mask.stl```
+Above I am using the mask schematics that are in the repository at ```mask/covid_mask.stl```
 
 You can also provide the following options:
 
-```./scale.py --mask-file=~/Downloads/mask/covid_mask.stl --nose-to-chin-in-cm=<measurement> --output-dir=<some_output_dir>```
+```./scale.py --mask-file=mask/covid_mask.stl --nose-to-chin-in-cm=<measurement> --output-dir=<some_output_dir>```
 
 If this option is not provided then the script will create a dated output directory.
 
 You can also provide a regular expression to parse certain files in the input directory for example:
 
-```./scale.py --mask-file=~/Downloads/mask/covid_mask.stl --nose-to-chin-in-cm=<measurement> --output-dir=<some_output_dir> --rest-files-regex="covid.*stl"```
+```./scale.py --mask-file=mask/covid_mask.stl --nose-to-chin-in-cm=<measurement> --output-dir=<some_output_dir> --rest-files-regex="covid.*stl"```
 
 Along with the file pointed to by "--mask-file", this option will provide a regular expression to parse other stl files in the same directory as the input file and write out the scaled version to the output directory. If this option isn't provided then all stl file in the input directory will be picked up.
 
