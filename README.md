@@ -31,11 +31,15 @@ After this you should be good to go and execute the script
 
 # How to use the script
 
+### Basics ###
+
 You need to download any of the schematics for building the mask. You also need to get the measurement from nose to chin as mentioned above. Then you can invoke the following command:
 
 ```./scale.py --mask-file=mask/covid_mask.stl --nose-to-chin-in-cm=<measurement>```
 
 Above I am using the mask schematics that are in the repository at ```mask/covid_mask.stl```
+
+### With directory (optional) ###
 
 You can also provide the following options:
 
@@ -43,15 +47,19 @@ You can also provide the following options:
 
 If this option is not provided then the script will create a dated output directory.
 
+### Specify padding (optional) ###
+
+An option for padding can also be provided. I am using a window seal which has 3mm thickness to pad around the insides of the mask. By deafault this script will take that length into account. If you want to add your padding then you can use the following command:
+
+```./scale.py --mask-file=mask/covid_mask.stl --nose-to-chin-in-cm=<measurement> --padding-in-cm=<padding_measurement>```
+
+### Other files to pick (optional) ###
+
 You can also provide a regular expression to parse certain files in the input directory for example:
 
 ```./scale.py --mask-file=mask/covid_mask.stl --nose-to-chin-in-cm=<measurement> --output-dir=<some_output_dir> --rest-files-regex="covid.*stl"```
 
 Along with the file pointed to by "--mask-file", this option will provide a regular expression to parse other stl files in the same directory as the input file and write out the scaled version to the output directory. If this option isn't provided then all stl file in the input directory will be picked up.
-
-An option for padding can also be provided. I am using a window seal which has 3mm thickness to pad around the insides of the mask. By deafault this script will take that length into account. If you want to add your padding then you can use the following command:
-
-```./scale.py --mask-file=mask/covid_mask.stl --nose-to-chin-in-cm=<measurement> --padding-in-cm=<padding_measurement>```
 
 # Things to improve on
 
