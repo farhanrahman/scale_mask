@@ -62,7 +62,7 @@ class MeshScaler(object):
 
 if __name__=="__main__":
 
-    parser = optparse.OptionParser("scale_mask.py")
+    parser = optparse.OptionParser("scale.py")
 
     # Compulsory parameters
 
